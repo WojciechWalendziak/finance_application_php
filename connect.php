@@ -1,8 +1,8 @@
 <?php
 
-$host = "localhost";
-$db_user = "root";
-$db_password = "";
-$db_name = "finance_application_database";
+$host = 'localhost';
+$db_user = 'root';
+$db_password = '';
+$db_name = 'finance_application_database';
 
 ?>

@@ -26,13 +26,12 @@
 
 		if ($database_connection->query($sql) === TRUE)
 		{
-			echo 'kategoria zostala dodana';
-			echo '<link rel="stylesheet" href="/html_new/styles/styles.css" type="text/css"/><form class="container" action="return_to_menu.php" method="post"><input class="submit_button" type="submit" value="Wróć do Menu"></form>';
+			echo '<!DOCTYPE html><html lang="pl"></html><html><head><link rel="stylesheet" href="/public_html/styles/styles.css" type="text/css"/></head><tbody><h1>Kategoria zostala dodana</h1><form class="container" action="return_to_menu.php" method="post"><input class="submit_button" type="submit" value="Wróć do Menu"></form></tbody</html>';
 		} 
 		else
 		{
 			echo 'Error: ' . $sql . '<br>' . $database_connection;
-			echo '<link rel="stylesheet" href="/html_new/styles/styles.css" type="text/css"/><form class="container" action="return_to_menu.php" method="post"><input class="submit_button" type="submit" value="Wróć do Menu"></form>';
+			echo '<link rel="stylesheet" href="styles/styles.css" type="text/css"/><form class="container" action="return_to_menu.php" method="post"><input class="submit_button" type="submit" value="Wróć do Menu"></form>';
 		}
 	}
 	$database_connection->close();

@@ -14,8 +14,8 @@ window.onload = function current_date()
     mm = '0' + mm;
   } 
       
-  today = mm + '/' + dd + '/' + yyyy;
-  document.getElementById("date").setAttribute("placeholder", today);
+  today_bis = mm + '/' + dd + '/' + yyyy;
+  //document.getElementById("date").setAttribute("placeholder", today_bis);
 }
 function get_selected_field()
 	{

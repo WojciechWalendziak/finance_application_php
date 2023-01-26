@@ -36,6 +36,16 @@
 			$row = $result->fetch_assoc();
 			$user_id = $row['user_id'];
 			$sql = $database_connection->query("UPDATE users_list SET user_login = '$new_login', user_password = '$new_password' WHERE user_id = '$user_id'");
+
+			if ($sql === TRUE)
+			{
+				echo '<!DOCTYPE html><html lang="pl"></html><html><head><link rel="stylesheet" href="/public_html/styles/styles.css" type="text/css"/></head><tbody><h1>Dane zostaly zmienione</h1><form class="container" action="return_to_menu.php" method="post"><input class="submit_button" type="submit" value="Wróć do Menu"></form></tbody</html>';
+			} 
+			else
+			{
+				echo "Error: " . $sql . "<br>" . $database_connection;
+				echo '<!DOCTYPE html><html lang="pl"></html><html><head><link rel="stylesheet" href="/public_html/styles/styles.css" type="text/css"/></head><tbody><h1>Error: ' . $sql . '<br>' . $database_connection.'</h1><form class="container" action="return_to_menu.php" method="post"><input class="submit_button" type="submit" value="Wróć do Menu"></form></tbody</html>';
+			}
 		}
 		else
 		{				

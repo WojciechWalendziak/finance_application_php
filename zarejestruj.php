@@ -44,12 +44,12 @@
 		else
 		{				
 			$_SESSION['blad'] = '<span style="color:red">Login lub hasło juz zajete!</span>';
-			header('Location: logowanie.php');	
+			header('Location: rejestracja.php');	
 			echo "0 results";
 		}
 		if ($database_connection->query($sql) === TRUE)
 		{
-			$_SESSION['blad'] = '<span style="color:red">Konto zostalo stworzone, proszę się zalogować</span>';
+			$_SESSION['blad'] = '<h1 style="color:white">Konto zostalo stworzone, proszę się zalogować</h1>';
 			header('Location: logowanie.php');	
 		} 
 		else 
